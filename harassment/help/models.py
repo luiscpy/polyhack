@@ -13,8 +13,8 @@ class Colaborator(models.Model):
 
 class Request(models.Model):
     name = models.CharField(max_length=100)
-    colaborator = models.ForeignField(Colaborator, on_delete=models.CASCADE)
+    colaborator = models.ForeignKey(Colaborator, on_delete=models.CASCADE)
     email = models.CharField(max_length=100)
-    age = models.SmallIntegerField(NULL=False)
+    age = models.SmallIntegerField()
 
 #class Survey(models.Model):
